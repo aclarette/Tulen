@@ -28,6 +28,11 @@ header{
     align-items: center;
     cursor: pointer;
 }
+
+#btnMenu a {
+    z-index: 100;
+    background-color: cyan;
+}
 #redesSocias{
     padding: 250% 0%;
     width: 100%;

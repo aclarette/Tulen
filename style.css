@@ -28,7 +28,150 @@ header{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
+
+#btnMenu input{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    opacity: 0;
+}
+
+#btnMenu i{
+    color: white;
+    font-size: 30px;
+}
+
+
+.menu {
+    display: grid;
+    grid-template-rows: 90px 1fr;
+    position: absolute;
+    height: 100vh;
+    width: 270px;
+    background-color: white;
+    top: 0;
+    left: -270px;
+    z-index: 99;
+    transition: 0.3s;
+
+
+}
+
+#btnMenu input:checked~.menu{
+    left: 0;
+}
+
+
+
+
+.saidaMenu {
+    display: flex;
+}
+
+.esquerdaSaida {
+    background-color: #0f0f0f;
+    width: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquerdaSaida input {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.direitaSaida {
+    background-color: #2916e2;
+    height: 100%;
+    flex-grow: 1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.itensMenu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.botoesMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 35vh;
+    padding-top: 69%;
+
+}
+
+.botoesMenu  a {
+    color: rgba(0, 0, 0, 0.329);
+    font-size: 30px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    margin-top: 20%;
+}
+
+.botoesMenu a:hover {
+    color: #2916e2;
+    transition: 0.3s;
+}
+
+.inferiorMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 80%;
+}
+
+.redesSociaisMenu  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5%;
+    width: 80%;
+    margin-bottom: 10%;
+}
+
+.redesSociaisMenu i {
+    color: rgba(0, 0, 0, 0.329);
+    font-size: 18px;
+}
+
+
+.textoInferiorMenu {
+    text-align: center;
+    width: 100%;
+}
+
+.textoInferiorMenu h2 {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.603);
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+
 #redesSocias{
     padding: 250% 0%;
     width: 100%;
@@ -121,7 +264,4 @@ h2{
     font-weight: 600;
     border-radius: 2px;
     background: #fff;
-}
-img{
-    border-radius: 50%;
 }
